@@ -1,0 +1,3 @@
+Adding debouncing: http://www.talkinghightech.com/en/angular-2-creating-search-field-debounce-time/
+Reactive Forms: https://angular.io/guide/reactive-forms
+TypeScript: https://www.typescriptlang.org/docs/handbook/basic-types.html
