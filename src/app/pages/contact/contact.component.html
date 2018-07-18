@@ -1,20 +1,23 @@
+<h1>Contact Page</h1>
+
 <form>
-  <label for="name">Name:</label>
-  <br />
-  <input type="text" name="name" [(ngModel)]="formData.name">
-  <br />
 
-  <br />
+  <div class="input-group">
+    <label for="name">Name:</label>
+    <input type="text" name="name" [(ngModel)]="formData.name" (keyup)="validateName()">
+  </div>
 
-  <label for="email">Email:</label>
-  <br />
-  <input type="text" name="email" [(ngModel)]="formData.email">
-  <br />
+  <div class="input-group">
+    <label for="email">Email:</label>
+    <input type="text" name="email" [(ngModel)]="formData.email" (keyup)="validateEmail()">
+  </div>
 
-  <br />
-
-  <button (click)="submitForm()">Submit</button>
+  <div class="input-group">
+    <button class="btn" [disabled]="submitDisabled()" (click)="submitForm()">Submit</button>
+  </div>
 
   {{ formData.name }}
+  <br>
   {{ formData.email}}
+
 </form>
