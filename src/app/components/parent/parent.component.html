@@ -1,0 +1,26 @@
+<div class="parent-component">
+  <h2>This is the Parent Component</h2>
+
+  <div>
+    Here's the Parent's Data:
+  </div>
+
+  <div class="parent-name">
+    Name: {{ parentData.name }}
+  </div>
+
+  <div class="parent-items-label">Items:</div>
+  <ul class="parent-items">
+    <li *ngFor="let item of parentData.items">
+      {{ item.name }} - {{ item.desc }}
+      <button (click)="parentEditItem(item.id)">edit</button>
+    </li>
+  </ul>
+
+
+  <app-child
+    [childInput]="parentData.name"
+    (childUpdateOutput)="parentUpdateName($event)"
+    (childAddOutput)="parentAddItem($event)"
+    #childComponent></app-child>
+</div>

@@ -1,0 +1,31 @@
+.child-component {
+  padding: 25px;
+  background-color: #ccc;
+}
+
+.child-name {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  &.last { margin-bottom: 30px; }
+}
+
+.child-name-input {
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  background-color: #1e5799;
+  color: white;
+  font-size: 16px;
+}

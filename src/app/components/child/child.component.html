@@ -1,0 +1,30 @@
+<div class="child-component">
+  <h2>This is the child component</h2>
+
+  <div>
+    Here's the Child's Data:
+  </div>
+
+  <div class="child-name">
+    Name: {{ childData.name }}
+  </div>
+
+  <div class="child-name">
+    Item Name: {{ childData.itemName }}
+  </div>
+
+  <div class="child-name last">
+    Item Desc: {{ childData.itemDesc }}
+  </div>
+
+  <div class="child-name-input">
+    <input type="text" [(ngModel)]="childData.name">
+    <button (click)="childLocalUpdate()">Update</button>
+  </div>
+
+  <div class="child-item-Input">
+    <input type="text" [(ngModel)]="childData.itemName" placeholder="Item Name"><br>
+    <input type="text" [(ngModel)]="childData.itemDesc" placeholder="Item Description">
+    <button (click)="childLocalAdd()">Add Item</button>
+  </div>
+</div>
