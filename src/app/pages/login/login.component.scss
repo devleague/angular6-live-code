@@ -1,0 +1,38 @@
+h1 {
+  padding: 15px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ddd;
+  border-radius: 10px;
+  box-shadow: 10px 10px 2px 2px #eee;
+  margin: auto;
+  padding: 15px;
+
+  input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .btn {
+    margin: 15px 0;
+    padding: 15px;
+    border: 0px;
+    background: #1e5799;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+
+    &:disabled {
+      background-color: #ccc;
+    }
+  }
+}

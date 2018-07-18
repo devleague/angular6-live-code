@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Login Page
+  </h1>
+</div>
+
+<div class="login-container">
+  <form>
+    <input type="text" name="username" placeholder="username" [(ngModel)]="loginFormData.username">
+
+    <input type="text" name="password" placeholder="password" [(ngModel)]="loginFormData.password">
+
+    <button class="btn" (click)="login()">Login</button>
+
+    {{ loginFormData | json}}
+  </form>
+</div>

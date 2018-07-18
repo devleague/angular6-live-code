@@ -14,4 +14,22 @@ export class BackendService {
     // mock api
     return Promise.resolve({});
   }
+
+  register(data) {
+    // return this.http.post(this.url, data).toPromise();
+    // mock api
+    return Promise.resolve({});
+  }
+
+  login(data) {
+    // return this.http.post(this.url, data).toPromise();
+    // mock api
+    return Promise.resolve({});
+  }
+
+  logout() {
+    // return this.http.post(this.url, {}).toPromise();
+    // mock api
+    return Promise.resolve({});
+  }
 }

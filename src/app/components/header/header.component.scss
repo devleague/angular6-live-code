@@ -1,5 +1,5 @@
 ul {
-  margin: 15px;
+  margin: 0;
   padding: 0;
 }
 
@@ -8,4 +8,35 @@ li {
   display: inline-block;
   margin-right: 15px;
   a { text-decoration: none; }
+}
+
+.header-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eee;
+
+  .header-left {
+    margin: 0 15px;
+  }
+
+  .header-right {
+    float: right;
+    margin: 0 15px;
+  }
+}
+
+button {
+  border: 0;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #1e5799;
+  border-radius: 10px;
+  margin-left: 15px;
+  &:hover {
+    background-color: lighten(#1e5799, 10%);
+  }
 }
