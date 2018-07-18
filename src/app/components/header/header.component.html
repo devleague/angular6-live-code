@@ -20,12 +20,12 @@
   </div>
 
   <div class="header-right">
-    <div class="logged-in" *ngIf="isLoggedIn()">
+    <div class="logged-in" *ngIf="_isLoggedInAsObservable | async">
       Welcome, {{user.username}}
       <button (click)="logout()">Log Out</button>
     </div>
 
-    <div class="logged-out" *ngIf=!user.loggedIn>
+    <div class="logged-out" *ngIf=!isLoggedInAsObservable()>
       <button (click)="login()">Log In</button>
     </div>
   </div>
