@@ -1,0 +1,20 @@
+<form>
+  <label for="name">Name:</label>
+  <br />
+  <input type="text" name="name" [(ngModel)]="formData.name">
+  <br />
+
+  <br />
+
+  <label for="email">Email:</label>
+  <br />
+  <input type="text" name="email" [(ngModel)]="formData.email">
+  <br />
+
+  <br />
+
+  <button (click)="submitForm()">Submit</button>
+
+  {{ formData.name }}
+  {{ formData.email}}
+</form>
