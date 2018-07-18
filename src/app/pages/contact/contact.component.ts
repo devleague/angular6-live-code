@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BackendService } from '../../services/backend.service';
 
 @Component({
   templateUrl: './contact.component.html',
@@ -13,7 +14,7 @@ export class ContactComponent {
   nameValid = false;
   emailValid = false;
 
-  constructor() { }
+  constructor(private backend: BackendService) { }
 
   validateName(data) {
     // validate exists
@@ -41,5 +42,9 @@ export class ContactComponent {
 
   submitForm() {
     console.log('clicked');
+    this.backend.contact(this.formData)
+    .then((response) => {
+      console.log('Response: ', response);
+    });
   }
 }
