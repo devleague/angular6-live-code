@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // for input handling
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,6 +21,7 @@ import { SessionService } from './services/session.service';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ReactiveComponent } from './pages/reactive/reactive.component';
 import { CommunicationComponent } from './pages/communication/communication.component';
 
 @NgModule({
@@ -31,13 +33,15 @@ import { CommunicationComponent } from './pages/communication/communication.comp
     CommunicationComponent,
     LoginComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ReactiveComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [
     AuthService,

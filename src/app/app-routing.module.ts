@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ReactiveComponent } from './pages/reactive/reactive.component';
 import { CommunicationComponent } from './pages/communication/communication.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'reactive', component: ReactiveComponent },
   { path: 'communication', component: CommunicationComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

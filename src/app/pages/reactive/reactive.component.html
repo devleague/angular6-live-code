@@ -1,0 +1,166 @@
+<div class="section">
+  <h1>Single Form Control</h1>
+
+  <label>
+    Name:
+    <input type="text" [formControl]="name">
+  </label>
+
+  <p>
+    Value: {{ name.value }}
+  </p>
+
+  <p>
+    <button (click)="updateName()">Update Name</button>
+  </p>
+</div>
+
+<div class="section">
+  <h1>Profile Group Form</h1>
+
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName">
+    </label>
+
+    <br>
+
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+
+    <br>
+
+    <label>
+      Address:
+      <input type="text" formControlName="address">
+    </label>
+
+    <br>
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    <button type="button" (click)="defaultForm()">Default</button>
+  </form>
+</div>
+
+<div class="section">
+  <h1>Built Form</h1>
+
+  <form [formGroup]="builtForm" (ngSubmit)="onBuiltSubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName" required>
+    </label>
+
+    <br>
+
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+
+    <br>
+
+    <div formGroupName="address">
+      <label>
+        Street:
+        <input type="text" formControlName="street">
+      </label>
+
+      <br>
+
+      <label>
+        City:
+        <input type="text" formControlName="city">
+      </label>
+
+      <br>
+
+      <label>
+        State:
+        <input type="text" formControlName="state">
+      </label>
+
+      <br>
+
+      <label>
+        Zip:
+        <input type="text" formControlName="zip">
+      </label>
+    </div>
+
+    <p>
+      Form Status: {{ builtForm.status }}
+    </p>
+
+    <button type="submit" [disabled]="!builtForm.valid">Submit</button>
+  </form>
+</div>
+
+<div class="section">
+  <h1>Built Form Array</h1>
+
+  <form [formGroup]="arrayForm" (ngSubmit)="onArraySubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName" required>
+    </label>
+
+    <br>
+
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+
+    <br>
+
+    <div formGroupName="address">
+      <label>
+        Street:
+        <input type="text" formControlName="street">
+      </label>
+
+      <br>
+
+      <label>
+        City:
+        <input type="text" formControlName="city">
+      </label>
+
+      <br>
+
+      <label>
+        State:
+        <input type="text" formControlName="state">
+      </label>
+
+      <br>
+
+      <label>
+        Zip:
+        <input type="text" formControlName="zip">
+      </label>
+    </div>
+
+    <div formArrayName="aliases">
+      <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
+
+      <div *ngFor="let address of aliases.controls; let i=index">
+        <!-- The repeated alias template -->
+        <label>
+          Alias:
+          <input type="text" [formControlName]="i">
+        </label>
+      </div>
+    </div>
+
+    <p>
+      Form Status: {{ arrayForm.status }}
+    </p>
+
+    <button type="submit" [disabled]="!arrayForm.valid">Submit</button>
+  </form>
+</div>
