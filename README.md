@@ -1,7 +1,7 @@
 # AngularDemo
 
 ## Installation
- - Start by installing angular-cli: `npm i -g angular-cli`
+ - Start by installing angular-cli: `npm i -g @angular/cli`
  - Generate a project using: `ng new angular-demo --style=scss`
  - Change into dir: `cd angular-demo`
  - Install project deps: `npm i`
